@@ -1,0 +1,13 @@
+<h1>My Blog</h1>
+
+<% @blog_posts.each do |blog_post| %>
+    <div>
+        <!--<h2><%= link_to blog_post.title, "/blog_posts/#{blog_post.id}" %></h2>-->
+        <!--<h2><%= link_to blog_post.title, blog_post_path(blog_post.id) %></h2>-->
+        <!-- it is smart enough to use id behind the scenes -->
+        <!--<h2><%= link_to blog_post.title, blog_post_path(blog_post) %></h2>-->
+        <!-- smar enough to user blog_post_path and put id in it-->
+        <h2><%= link_to blog_post.title, blog_post %></h2>
+        <%= blog_post.body %>
+    </div>
+<% end %>
